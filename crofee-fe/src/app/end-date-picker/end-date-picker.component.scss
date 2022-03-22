@@ -1,0 +1,71 @@
+$light-turquoise: #d6e1e3;
+$dark-turquoise: #154f5b;
+$field-placeholder: #73959d;
+$white: #ffffff;
+
+.end-date-picker-container {
+  margin: 1rem;
+
+  ::ng-deep.myDpSelector .myDpSelectorPosInitial {
+    width: 360px;
+  }
+
+  .end-date-input {
+    padding: 12px 16px;
+    width: 360px;
+    height: 16px;
+    border: 2px solid $light-turquoise;
+    border-radius: 8px;
+
+    &:focus {
+      outline: $light-turquoise;
+    }
+  }
+
+  .end-date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    height: 475px;
+    width: fit-content;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px $light-turquoise;
+
+    .date-picker-title {
+      font-weight: 700;
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      color: $dark-turquoise;
+    }
+
+    .action-button {
+      margin: 12px 0;
+
+      .action-text {
+        color: $dark-turquoise;
+      }
+    }
+
+    .or {
+      padding: 0;
+      width: 100%;
+      border: none;
+      margin-top: 30px;
+      text-align: center;
+      overflow: visible;
+      border-top: 1px solid $light-turquoise;
+
+      &::after {
+        content: "or";
+        position: relative;
+        top: -0.7em;
+        padding: 0 0.25em;
+        color: $field-placeholder;
+        text-transform: uppercase;
+        background: $white;
+      }
+    }
+  }
+}

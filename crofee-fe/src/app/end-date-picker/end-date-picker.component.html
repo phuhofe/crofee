@@ -1,0 +1,38 @@
+<div class="end-date-picker-container">
+  <input
+    type="text"
+    (click)="isOpenDatePicker = !isOpenDatePicker"
+    class="end-date-input"
+    placeholder="Select end date"
+    [value]="endDateInput | date"
+  />
+
+  <div class="end-date-container" *ngIf="isOpenDatePicker">
+    <div class="date-picker-title">End date</div>
+
+    <div class="action-button">
+      <label class="container">
+        <span class="action-text">No end date</span>
+        <input
+          type="radio"
+          name="radio"
+          (click)="toggleNoEndDate()"
+          [checked]="isNoEndDate"
+        />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <hr class="or" />
+
+    <input
+      angular-mydatepicker
+      class="datePicker"
+      type="hidden"
+      [(ngModel)]="model"
+      [options]="myDatePickerOptions"
+      (dateChanged)="onDateChanged($event)"
+      #dp="angular-mydatepicker"
+    />
+  </div>
+</div>
