@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AngularMyDatePickerModule } from 'angular-mydatepicker';
 import { EndDatePickerComponent } from './end-date-picker/end-date-picker.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [AppComponent, EndDatePickerComponent],
